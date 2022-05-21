@@ -1,0 +1,36 @@
+<html>
+<head>
+  <link href="css/home.css" rel="stylesheet">
+</head>
+<body>
+  <a id="logo-link" href="#">
+        <img id="logo" src="./images/logo.png"/>
+    </a>
+  
+     <div class="navbar">
+        <div id="extra">
+            <a href="./index.html">Home</a>
+            <a href="./calculator.html">Calculator</a>
+            <a href="./games/map/index.html">Learn about Maps!</a>
+            <a href="./games/circle/index.html">Formulas of a Circle</a>
+            <a href="./triangleslearn.html">Formulas of a Triangle</a>
+            <a href="./about.html">About Us</a>
+        </div>
+    </div>
+    
+    
+    <h2 style="color:white">Mini Calculator<h2> <br>
+    <label for = "num1" style="color:white"> First Number: </label> 
+    <input type="text" id="num1" name="num1"> <br>
+    <label for="num2" style="color: white"> Second Number: </label>
+    <input type="text" id="num2" name="num2"> <br>
+    <label for="answer" style="color: white"> Answer:</label>
+    <input type="text" id="answer" name="answer"><br>
+    <button type="button" onclick="Add()">Add</button>
+    <button type="button" onclick="Subtract()">Subtract</button>
+    <button type="button" onclick="Multiply()">Multiply</button>
+    <button type="button" onclick="Divide()">Divide</button>
+    
+    <script src="./js/Calculator.js"></script>
+</body>
+</html>

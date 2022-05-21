@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>idk</title>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.oncontextmenu = () => return false;
+
+        var pageWidth = window.innerWidth;
+        var pageHeight = window.innerHeight;
+        
+        canvas.width = pageWidth;
+        canvas.height = pageHeight;
+
+        var image = new Image();
+
+        image.onload = () => {
+            x = width / 2;
+            y = height / 4 + 48;
+            ctx.drawImage(bg, 0, 0, pageWidth, pageHeight);
+        }
+
+        var x;
+        var y;
+        var xOffset;
+        var yOffset;
+
+        canvas.addEventListener('mousemove', (event) => {
+            ctx.clearRect(0, 0, pageWidth, pageHeight);
+            xOffset = -1.0 * (event.pageX - (pageWidth / 2) / (pageWidth / 32))
+            yOffset = -1.0 * (event.pageY - (pageHeight / 2) / (pageHeight / 18))
+            ctx.drawImage(bg, 0, 0, pageWidth, pageHeight);
+        })
+
+        image.src = "./world-map.png";
+    </script>
+</body>
+</html>
