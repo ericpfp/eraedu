@@ -4,6 +4,8 @@ const ctx = canvas.getContext("2d");
 var pageWidth = window.innerWidth;
 var pageHeight = window.innerHeight;
 
+var circleIsBeingHovered = false;
+
 canvas.width = pageWidth;
 canvas.height = pageHeight;
 
@@ -31,6 +33,15 @@ function startGUI() {
     source.__li.style.borderLeft = "3px solid #00FF7F";
 }
 
+
+canvas.onmousemove = (event) => {
+    /*if () {
+        circleIsBeingHovered = true;
+    } else {
+        circleIsBeingHovered = false;
+    }*/
+}
+
 // draw the circle with the following radius
 function drawCircle(radius) {
     var centerWidth = pageWidth / 2;
@@ -42,17 +53,20 @@ function drawCircle(radius) {
 
     /////////////////////////////////////////////
 
+    // Draw the circle.
+
     ctx.beginPath();
 
-    // Draw the circle
     ctx.arc(centerWidth, centerHeight, radius, 2 * Math.PI, false);
 
-    ctx.fillStyle = 'grey';
+    ctx.fillStyle = '#d6d6d6';
     ctx.fill();
-    
+
     ctx.stroke();
 
     /////////////////////////////////////////////
+
+    
 
     ctx.beginPath();
 
@@ -122,6 +136,8 @@ function drawCircle(radius) {
 
     /////////////////////////////////////////////
 
+    //
+
     ctx.beginPath();
     
     ctx.font = "30px arial";
@@ -160,6 +176,18 @@ function drawCircle(radius) {
     ctx.lineTo(centerWidth - (radius / 2), centerHeight - (radius / 2)); // take the whole width for ex, divide the radius by 2 and take it away from the center width
 
     ctx.stroke();
+
+    /////////////////////////////////////////////
+
+    // Draw formulas
+
+    var diameterFormula = 'Diameter = 2r';
+    var circumferenceFormula = 'Circumference = 2πr';
+    var areaFormula = 'Area = πr²'
+
+    ctx.beginPath();
+    //ctx.fillText()
+    ctx.stroke();
 }
 
 // this function runs every tick
@@ -171,3 +199,5 @@ function update() {
 
 update();
 startGUI();
+
+

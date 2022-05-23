@@ -3,16 +3,7 @@
 <head>
     <title>EraEdu - Learning is the NEW Dreaming</title>
     <link href="./css/home.css" rel="stylesheet">
-    <style>
-  .triangle-up {
-     width: 0;
-    height: 0;
-    border: 150px solid transparent;
-    border-top: 0;
-    border-bottom: 300px solid red;
-    float: left;
-  }
-  </style>
+  
 </head>
 <body>
     <a id="logo-link" href="#">
@@ -21,57 +12,52 @@
 
     <h2 id="tagline">Education all the way!</h2>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar  -->
      <div class="navbar">
         <div id="extra">
             <a href="./index.html">Home</a>
             <a href="./calculator.html">Calculator</a>
-            <a href="./games/circle/index.html">Learn about Maps!</a>
-            <a href="./circle.html">Formulas of a Circle</a>
+            <a href=".">Learn about Maps!</a>
+            <a href="./games/circle/index.html">Formulas of a Circle</a>
             <a href="./triangleslearn.html">Formulas of a Triangle</a>
             <a href="./about.html">About Us</a>
         </div>
     </div>
     
     
-
-<h2 id = "tagline"  > Triangles!!</h2>
+<!-- This includes the header of the page, and also has a p tag that explains how to find the area of a triangle. Some in-line styling is done -->
+<h2 id = "tagline"  > How do you find the area of a triange?</h2>
 <div class="triangle-up"></div>
-<p style = "float:left; color:white;" > Well, what is a triangle? A triangle is a shape, and is shown on the left. How do you calculate it's area? <br></br>Well the formula is 1/2 * b *h. <br> This is a simple formula, and on the right, I will help you to find the area of a triangle
+<p  style = "float:left;"class = "cssfortriangle" > Well, what is a triangle? A triangle is a shape, and is shown on the left. How do you calculate it's area? <br></br>Well the formula is 1/2 * b *h. <br> This is a simple formula, and on the right, I will help you to find the area of a triangle</p>
 
-<!--<form style = "float:right;  padding: 0 20px 20px;" >
-  <label style = "color:white;" for="base">Base: </label>
-  <input type="text" id="base" name="base"><br><br>
-  <label style = "color:white;" for="height">Height: </label>
-  <input type="text" id="height" name="height"><br><br>
-</form>  -->
 
-<input type="text" id="base">
+
+<input type="text" style = "color:black;" class = "cssfortriangle" id="base" placeholder = "Enter Base of Triangle!">
+
+<input type="text" style = "color:black;" class = "cssfortriangle" id="height" placeholder = "Enter Height of Triangle!">
+
+<button class="cssfortriangle" style ="color:black;" id="submit">Submit</button>
+
   
-<button style="float: right;" id="submit">Submit</button>
-<p style="color: white; padding: 0 20px 20px; float: right;">   <br></br>First we have the formula 1/2 * b * h
-   We then subsitute, the values <span id="base1">cheese</span>  <span id="height1"></span>
-</p>
+<p class="cssfortriangle"> <br></br>First we have the formula 1/2 * b * h We then subsitute, the values  <span id="base1">(insert value in textboxes)</span> and <span id="height1"></span> <br></br>and, with this we can multiply both of these values. Doing this we get <span id= "multiply"></span> <br> We then times this by 1/2 or divide by 2, and we get <span id = "answer"</span> </p> 
 
-<!--document.getElementById ("bar").addEventListener ("click", foo);
 
-function foo() {
-    prompt(document.getElementById("questionOne").value);
-}  -->
-<!-- <div style = "float:right;  padding: 0 20px 20px;">
-  <label for = "base" style="color:white"> Enter base: </label> 
-  <input type="submit" id="base" name="base"> <br>
-  <label for = "height" style="color:white"> Enter height: </label> 
-  <input type="sbumit" id="height" name="height"> <br>
-  <p style = "color:white;"> First we have the formula 1/2 * b *h
-   We then subsitute, the values <label for = "base1" style = "color:white;"></label> and <label for = "height1" style = "color:white;"></label></p>
-  
-</div> -->
 <script>
   document.querySelector("#submit").addEventListener('click', () => {
-    let base = document.querySeletor("#base");
+    let base = document.querySelector("#base").value;
     const base1 = document.querySelector("#base1");
-    base1.textContent = base.value;
+    base1.textContent = base;
+    let height = document.querySelector("#height").value;
+    const height1 = document.querySelector("#height1");
+    height1.textContent = height;
+    let multiplyvalue = base * height;
+    const multiply = document.querySelector("#multiply");
+    multiply.textContent= multiplyvalue;
+    let answer = multiplyvalue/2;
+    const answer1 = document.querySelector("#answer");
+    answer1.textContent= answer;
+
+  
   })
   
 </script>

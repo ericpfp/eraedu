@@ -15,5 +15,17 @@ image.onload = () => {
 
 image.src = './world-map.png';
 
-ctx.font = '50px serif';
-ctx.fillText('Coordinates: ', 50, 90);
+function updateCoordinates() {
+    ctx.clearRect(0, 0, pageWidth, pageHeight);
+    
+    ctx.beginPath();
+
+    ctx.font = '50px serif';
+    ctx.fillText('Coordinates: ', 50, 90);
+    
+    ctx.stroke();
+    
+    requestAnimationFrame(updateCoordinates);
+}
+
+updateCoordinates();

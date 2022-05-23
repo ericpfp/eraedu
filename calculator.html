@@ -1,13 +1,16 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <link href="css/home.css" rel="stylesheet">
+    <title>EraEdu - About</title>
+    <link href="./css/home.css" rel="stylesheet">
 </head>
 <body>
-  <a id="logo-link" href="#">
+    <a id="logo-link" href="#">
         <img id="logo" src="./images/logo.png"/>
     </a>
-  
-     <div class="navbar">
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
         <div id="extra">
             <a href="./index.html">Home</a>
             <a href="./calculator.html">Calculator</a>
@@ -17,12 +20,12 @@
             <a href="./about.html">About Us</a>
         </div>
     </div>
-    
-    
-    <h2 style="color:white">Mini Calculator<h2> <br>
-    <label for = "num1" style="color:white"> First Number: </label> 
-    <input type="text" id="num1" name="num1"> <br>
-    <label for="num2" style="color: white"> Second Number: </label>
+        
+<!--   Here we put a header, and then add a label so the user knows what to input there, and we of course have an input tag which lets the user input numbers which then, the javasript will use depending on the button clicked and which function will run because of that   -->
+    <h2 style="color:white">Mini Calculator</h2> <br>
+      <label for = "num1" style="color:white"> First Number:</label> 
+      <input type="text" id="num1" name="num1"> <br>
+      <label for="num2" style="color: white" placeholder= "Enter the second number"> Second Number:          </label>
     <input type="text" id="num2" name="num2"> <br>
     <label for="answer" style="color: white"> Answer:</label>
     <input type="text" id="answer" name="answer"><br>
@@ -30,7 +33,9 @@
     <button type="button" onclick="Subtract()">Subtract</button>
     <button type="button" onclick="Multiply()">Multiply</button>
     <button type="button" onclick="Divide()">Divide</button>
-    
-    <script src="./js/Calculator.js"></script>
+
+<!--   Linking Javascript here- -->
+    <script src="./js/Calculator.js"></script> 
+      
 </body>
 </html>

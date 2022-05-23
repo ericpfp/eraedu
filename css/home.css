@@ -99,3 +99,18 @@ img:hover {
   opacity.7
   transition: .5s;
 }
+
+ .triangle-up {
+     width: 0;
+    height: 0;
+    border: 150px solid transparent;
+    border-top: 0;
+    border-bottom: 300px solid red;
+    float: left;
+  }
+.cssfortriangle {
+  float:right; 
+  color: white; 
+  padding: 1 60px 60px;
+}
+
