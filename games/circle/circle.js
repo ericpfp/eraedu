@@ -101,7 +101,7 @@ function drawCircle(radius) {
 
     // Draw the line for radius
     ctx.moveTo(centerWidth, centerHeight);
-    ctx.lineTo(centerWidth + radius, centerHeight);
+    ctx.lineTo(centerWidth + radius, centerHeight - 2); // minus 2 cause of circle line width
 
     ctx.stroke();
 
@@ -113,7 +113,7 @@ function drawCircle(radius) {
     ctx.strokeStyle = "#4e3deb";
 
     ctx.moveTo(centerWidth, centerHeight - radius);
-    ctx.lineTo(centerWidth, centerHeight + radius);
+    ctx.lineTo(centerWidth, centerHeight + radius - 2);
     
     ctx.stroke();
 
@@ -181,13 +181,15 @@ function drawCircle(radius) {
 
     // Draw formulas
 
+    /*ctx.beginPath();
+
     var diameterFormula = 'Diameter = 2r';
     var circumferenceFormula = 'Circumference = 2πr';
     var areaFormula = 'Area = πr²'
 
     ctx.beginPath();
     //ctx.fillText()
-    ctx.stroke();
+    ctx.stroke();*/
 }
 
 // this function runs every tick
@@ -199,5 +201,3 @@ function update() {
 
 update();
 startGUI();
-
-
