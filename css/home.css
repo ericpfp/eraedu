@@ -1,0 +1,102 @@
+body {
+    /* Awesome gradient from my least-loved website :) https://blocked.goguardian.com/ */
+    background-color: #3E3E3E;
+    background: radial-gradient(ellipse at center, #707070 13%, #333333 100%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    top: 0;
+    border-radius: 10%;
+/*    background: linear-gradient(aqua); */
+    font-family: Trebuchet MS;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar a {
+    width: 10px;
+    height: 10px;
+    text-decoration: none;
+    color:  #AFAFAF;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    color: #cccccc;
+    transition: 0.3s;
+}
+
+#logo {
+    width: 200px;
+box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+#logo-link {
+  display: block;
+  margin: auto;
+  width:200px;
+}
+
+#tagline {
+    text-align: center;
+    color: white;
+          
+
+}
+
+.content {
+  color: white;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.content a {
+    color: #19aeff;
+}
+
+.content a:hover {
+    color: #8cd7ff;
+    transition: 0.3s;
+}
+
+
+.image-area {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  align-items: center;
+  justify-content:center;
+
+
+}
+.animage {
+  padding: 0 20px 20px;
+}
+
+img:hover {
+  opacity.7
+  transition: .5s;
+}
+
+ .triangle-up {
+     width: 0;
+    height: 0;
+    border: 150px solid transparent;
+    border-top: 0;
+    border-bottom: 300px solid red;
+    float: left;
+  }
+.cssfortriangle {
+  float:right; 
+  color: white; 
+  padding: 1 60px 60px;
+}
+

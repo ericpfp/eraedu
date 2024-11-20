@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Simple title/Logo and linked CSS  -->
+
+    <title>EraEdu - Learning is the NEW Dreaming</title>
+    <link href="./css/home.css" rel="stylesheet">
+  
+</head>
+<body>
+    <a id="logo-link" href="#">
+        <img id="logo" src="./images/logo.png"/>
+    </a>
+
+    <h2 id="tagline">Education all the way!</h2>
+
+ <!-- Navigation Bar This is the standard navbar with a hyperlink tag leading to each html page  -->
+     <div class="navbar">
+        <div id="extra">
+            <a href="./index.html">Home</a>
+            <a href="./calculator.html">Calculator</a>
+            <a href="./map.html">Learn about Maps!</a>
+            <a href="./circle.html">Formulas of a Circle</a>
+            <a href="./triangleslearn.html">Formulas of a Triangle</a>
+            <a href="./about.html">About Us</a>
+        </div>
+    </div>
+    
+    
+
+        <!-- This includes the header of the page, and also has a p tag that explains how to find the area of a triangle. Some in-line styling is done -->
+
+<h2 id = "tagline"  > How do you find the area of a triange?</h2>
+
+      <br>
+
+<div class="triangle-up"></div>
+<p  style = "float:left;"class = "cssfortriangle" > Well, what is a triangle? A triangle is a shape, and is shown on the left. How do you calculate it's area? <br></br>Well the formula is 1/2 * b *h. <br> This is a simple formula, and on the right, I will help you to find the area of a triangle</p>
+
+
+<!-- Here we added  2 input textvoxes wiht classes and style, so we can acess them. We have also added an button for the eventlistener to grab the values -->
+<input type="text" style = "color:black;" class = "cssfortriangle" id="base" placeholder = "Enter Base of Triangle!">
+
+<input type="text" style = "color:black;" class = "cssfortriangle" id="height" placeholder = "Enter Height of Triangle!">
+
+<button class="cssfortriangle" style ="color:black;" id="submit">Submit</button>
+
+
+<!--       Here we just added another p tag, and inside a lot of spans so we can edit the text content of them depending on the value the user inputs -->
+<p class="cssfortriangle"> <br></br>First we have the formula 1/2 * b * h We then subsitute, the values  <span id="base1"><mark>(insert values in textboxes) </mark></span>  <span id="height1"></span> <br></br>and, with this we can multiply both of these values. Doing this we get <span id= "multiply"></span> <br> We then times this by 1/2 or divide by 2, and we get <span id = "answer"</span> </p> 
+
+
+<!--    This is where the js starts. Here we have added an event listenter, and inside that added queryselectors. This selects each span value, and edits the text content with a variable created taking the input's value. -->
+<script>
+  document.querySelector("#submit").addEventListener('click', () => {
+    let base = document.querySelector("#base").value;
+    const base1 = document.querySelector("#base1");
+    base1.textContent = base;
+    let height = document.querySelector("#height").value;
+    const height1 = document.querySelector("#height1");
+    height1.textContent = height;
+    let multiplyvalue = base * height;
+    const multiply = document.querySelector("#multiply");
+    multiply.textContent= multiplyvalue;
+    let answer = multiplyvalue/2;
+    const answer1 = document.querySelector("#answer");
+    answer1.textContent= answer;
+
+  
+  })
+  
+</script>
+</body>
+</html>
